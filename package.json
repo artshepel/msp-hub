@@ -25,11 +25,6 @@
     "format": "prettier --write ./src",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn format && git add -A ."
-    }
-  },
   "browserslist": {
     "production": [
       ">0.2%",
