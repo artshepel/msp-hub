@@ -1,9 +1,10 @@
 import React from 'react';
-
 import './App.scss';
 
+import TestComponent from '../TestComponent';
+
 const App: React.FC = () => {
-  return <div className='container'></div>;
+  return <TestComponent />;
 };
 
 export default App;

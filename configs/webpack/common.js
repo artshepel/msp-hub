@@ -20,8 +20,21 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(scss|sass)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        test: /\.(scss)$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: '[name]_[local]_[hash:base64:3]',
+              },
+              importLoaders: 1,
+              sourceMap: true,
+            },
+          },
+          'sass-loader',
+        ],
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
@@ -32,8 +45,10 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: 'index.html',
-    title: 'Hot Module Replacement',
-  })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'index.html',
+      title: 'Hot Module Replacement',
+    }),
+  ],
 };
