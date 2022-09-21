@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFormik } from 'formik';
+import { Link } from 'react-router-dom';
 
 import s from './TestComponent.scss';
 
@@ -63,6 +64,7 @@ const TestComponent: React.FC = () => {
           </div>
         )}
       </div>
+      <Link to='/test'> Navigate</Link>
     </div>
   );
 };
