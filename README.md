@@ -1,10 +1,24 @@
+# MSP HUB
+> **NodeJS version: 16.17.0**
+
+* **[React](https://facebook.github.io/react/)** (18.x)
+* **[Redux-toolkit](https://redux-toolkit.js.org/)** (1.x)
+* **[Webpack](https://webpack.js.org/)** (5.x)
+* **[Typescript](https://www.typescriptlang.org/)** (*)
+* **[Hot Module Replacement (HMR)](https://webpack.js.org/concepts/hot-module-replacement/)** + [Fast Refresh](https://github.com/pmmmwh/react-refresh-webpack-plugin)
+* Image support ([Image Webpack Loader](https://github.com/tcoopman/image-webpack-loader))
+* [SASS](http://sass-lang.com/) support
+* Code linting ([ESLint](https://github.com/eslint/eslint)) and formatting ([Prettier](https://github.com/prettier/prettier))
+* Test frameworks ([Jest](https://facebook.github.io/jest/) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro))
+
 ## Structure
 
 	.
 	├── docs                       # Documentation files
+	├── .husky                     # Husky scripts files
 	├── public                     
 	├── src                        # Source files
-	│   ├── assetc                 # Assets (fonts etc.)
+	│   ├── assets                 # Assets (fonts etc.)
 	│   ├── components             # React components
 	│   ├── features               # Redux logic for any functional feature
 	│   ├── hooks                  # Shared hooks
@@ -14,6 +28,7 @@
 	│   │   ├── styles.scss        # Shared styles classes
 	├── configs                    # Configuration files
 	│   ├── webpack                # Webpack configuration
+	│   ├── jest.json              # Jest configuration
 	└── README.md
 
 ## Prerequisites
@@ -21,14 +36,18 @@
 ```bash
 $ yarn install
 ```
+**All commands**
 
-## Available Scripts
+Command | Description
+--- | ---
+`yarn start-dev` | Build app continuously (HMR enabled) and serve @ `http://localhost:8080`
+`yarn start-prod` | Build app once (HMR disabled) to `/dist/` and serve @ `http://localhost:3000`
+`yarn build` | Build app to `/dist/`
+`yarn test` | Run tests
+`yarn lint` | Run linter
+`yarn format` | Run linter and fix issues
+`yarn start` | (alias of `yarn start-dev`)
 
-- `start` - start app in development mode,
-- `lint` - lint source files and tests,
-- `prettier` - reformat files,
-- `test` - run tests,
-- `test:watch` - interactive watch mode to automatically re-run tests
 
 ## Commit
 
