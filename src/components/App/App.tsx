@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { RouteProps } from 'react-router';
 
 import './App.scss';
+import routes from '@msp/routes/main';
 
-import routes from '../../routes/main';
 
 interface IRouteProps extends Omit<RouteProps, 'element'> {
   element: React.ElementType;

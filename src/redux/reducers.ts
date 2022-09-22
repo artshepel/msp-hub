@@ -1,5 +1,6 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import counterSlice from '../features/counter/counterSlice';
+
+import counterSlice from '@msp/features/counter/counterSlice';
 import { pokemonApi } from './api/pokemons/pokemonApi';
 
 const rootReducer = combineReducers({

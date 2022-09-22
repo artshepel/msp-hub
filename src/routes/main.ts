@@ -1,5 +1,5 @@
-import RoutingTestComponent from '../components/RoutingTestComponent';
-import TestComponent from '../components/TestComponent';
+import TestComponent from '@msp/components/TestComponent';
+import RoutingTestComponent from '@msp/components/RoutingTestComponent';
 
 interface RouteProps {
   path: string;
