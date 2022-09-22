@@ -19,6 +19,8 @@
 	├── public                     
 	├── src                        # Source files
 	│   ├── assets                 # Assets (fonts etc.)
+	│   ├── routes                 
+	│   │   ├── main.ts            # Routes list
 	│   ├── components             # React components
 	│   ├── features               # Redux logic for any functional feature
 	│   ├── hooks                  # Shared hooks
