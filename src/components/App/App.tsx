@@ -4,7 +4,7 @@ import { RouteProps } from 'react-router';
 
 import './App.scss';
 import routes from '@msp/routes/main';
-
+import ErrorBoundary from '../ErrorBoundary';
 
 interface IRouteProps extends Omit<RouteProps, 'element'> {
   element: React.ElementType;
@@ -20,7 +20,9 @@ const renderRoutes = (): React.ReactElement[] =>
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <Routes>{renderRoutes()}</Routes>
+      <ErrorBoundary>
+        <Routes>{renderRoutes()}</Routes>
+      </ErrorBoundary>
     </BrowserRouter>
   );
 };

@@ -1,0 +1,18 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .errorImage {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+  }
+  .errorDescription {
+    font-size: 1.8rem;
+  }
+  .errorAdvice {
+    font-size: 1.1rem;
+  }
+}
