@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 
 import s from './TestComponent.scss';
 
-import { increment } from '../../features/counter/counterSlice';
-import { useAppDispatch, useAppSelector } from '../../redux/hooks';
-import { useLazyGetPokemonByNameQuery } from '../../redux/api/pokemons/pokemonApi';
+import { increment } from '@msp/features/counter/counterSlice';
+import { useAppDispatch, useAppSelector } from '@msp/redux/hooks';
+import { useLazyGetPokemonByNameQuery } from '@msp/redux/api/pokemons/pokemonApi';
+import { PokemonSchema } from './formLogic';
 
 interface ISubmitFormValues {
   pokemonName: string;
@@ -17,6 +18,7 @@ const TestComponent: React.FC = () => {
     initialValues: {
       pokemonName: '',
     },
+    validationSchema: PokemonSchema,
     onSubmit: (values: ISubmitFormValues) => {
       void trigger(values.pokemonName, true);
     },
@@ -44,6 +46,7 @@ const TestComponent: React.FC = () => {
             value={formik.values.pokemonName}
           />
           <button type='submit'>Get Pokemon by name</button>
+          <div>{formik.errors.pokemonName}</div>
         </form>
         <div>
           {result.isError && 'No pokemon found :('}
