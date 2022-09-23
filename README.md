@@ -32,6 +32,15 @@
 	│   ├── webpack                # Webpack configuration
 	│   ├── jest.json              # Jest configuration
 	└── README.md
+	
+## Responsive breakpoints
+
+Breakpoint | Width
+--- | ---
+Tiny screen | 576px
+Small screen | 768px
+Medium screen | 992px
+Large screen | 1200px
 
 ## Prerequisites
 
