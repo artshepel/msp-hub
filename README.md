@@ -52,8 +52,8 @@ $ yarn install
 
 Command | Description
 --- | ---
-`yarn start-dev` | Build app continuously (HMR enabled) and serve @ `http://localhost:8080`
-`yarn start-prod` | Build app once (HMR disabled) to `/dist/` and serve @ `http://localhost:3000`
+`yarn start-dev` | Build app continuously (HMR enabled) and serve @ `http://localhost:3000`
+`yarn start-prod` | Build app once (HMR disabled) to `/dist/`
 `yarn build` | Build app to `/dist/`
 `yarn test` | Run tests
 `yarn lint` | Run linter
