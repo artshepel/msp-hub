@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { RouteProps } from 'react-router';
 
 import './App.scss';
@@ -19,11 +19,11 @@ const renderRoutes = (): React.ReactElement[] =>
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <ErrorBoundary>
         <Routes>{renderRoutes()}</Routes>
       </ErrorBoundary>
-    </BrowserRouter>
+    </Router>
   );
 };
 
