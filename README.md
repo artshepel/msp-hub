@@ -32,6 +32,7 @@
 	│   ├── webpack                # Webpack configuration
 	│   ├── jest.json              # Jest configuration
 	└── README.md
+> Modules can be resolved using absolute path alias @msp (e.g "@msp/routes/main")
 	
 ## Responsive breakpoints
 
