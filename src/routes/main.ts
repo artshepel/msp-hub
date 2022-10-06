@@ -1,14 +1,10 @@
-import TestComponent from '@msp/components/TestComponent';
-import RoutingTestComponent from '@msp/components/RoutingTestComponent';
+import Overview from '@msp/components/Overview';
 
 interface RouteProps {
   path: string;
   element: React.FC;
 }
 
-const routes: RouteProps[] = [
-  { path: '/', element: TestComponent },
-  { path: '/test', element: RoutingTestComponent },
-];
+const routes: RouteProps[] = [{ path: '/', element: Overview }];
 
 export default routes;

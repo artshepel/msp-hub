@@ -1,12 +1,6 @@
 import { combineReducers } from '@reduxjs/toolkit';
 
-import counterSlice from '@msp/features/counter/counterSlice';
-import { pokemonApi } from './api/pokemons/pokemonApi';
-
-const rootReducer = combineReducers({
-  counter: counterSlice,
-  [pokemonApi.reducerPath]: pokemonApi.reducer,
-});
+const rootReducer = combineReducers({});
 
 export type IRootState = ReturnType<typeof rootReducer>;
 
