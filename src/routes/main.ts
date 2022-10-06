@@ -1,10 +1,10 @@
-import Overview from '@msp/components/Overview';
+import Overview from '@msp/components/Overview'
 
 interface RouteProps {
-  path: string;
-  element: React.FC;
+  path: string
+  element: React.FC
 }
 
-const routes: RouteProps[] = [{ path: '/', element: Overview }];
+const routes: RouteProps[] = [{ path: '/', element: Overview }]
 
-export default routes;
+export default routes
