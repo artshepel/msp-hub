@@ -33,15 +33,6 @@
 	│   ├── jest.json              # Jest configuration
 	└── README.md
 > Modules can be resolved using absolute path alias @msp (e.g "@msp/routes/main")
-	
-## Responsive breakpoints
-
-Breakpoint | Width
---- | ---
-Tiny screen | 576px
-Small screen | 768px
-Medium screen | 992px
-Large screen | 1200px
 
 ## Prerequisites
 
